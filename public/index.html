@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Bebés 2027</title>
+    <meta name="description" content="Una lista de mujeres que sueñan con recibir a su bebé durante el 2027. Sumá tu nombre y tu fecha de nacimiento." />
+    <meta name="theme-color" content="#a80f29" />
+    <meta property="og:title" content="Bebés 2027" />
+    <meta property="og:description" content="Cada nombre será un deseo, una ilusión y una historia esperando su momento." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://bebes-2027.pages.dev/img/og.jpg" />
+    <meta property="og:url" content="https://bebes-2027.pages.dev/" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/literata-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <main>
+      <header class="masthead">
+        <svg class="pin masthead__pin" viewBox="0 0 160 40" aria-hidden="true" focusable="false">
+          <use href="#safety-pin" />
+        </svg>
+        <h1 class="title stamped">
+          <span class="title__word">Bebés</span>
+          <span class="title__year">2027</span>
+        </h1>
+        <p class="lead">
+          Vamos a crear una lista de mujeres que desean convertirse en mamás y que sueñan con recibir a su bebé durante el 2027.
+        </p>
+      </header>
+
+      <section class="stage" aria-labelledby="form-title">
+        <h2 id="form-title" class="visually-hidden">Sumá tu deseo</h2>
+
+        <div class="ribbon" id="ribbon" data-state="idle">
+          <div class="ribbon__inner">
+          <div class="ribbon__stamp" aria-hidden="true">
+            <span class="ribbon__stamp-name" id="stamp-name" data-empty="true">Tu nombre</span>
+            <span class="ribbon__stamp-date" id="stamp-date" data-empty="true">dd · mm · aaaa</span>
+          </div>
+
+          <form class="ribbon__form" id="wish-form" novalidate>
+            <div class="field">
+              <label class="field__label" for="name">Tu nombre</label>
+              <input
+                class="field__input"
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                autocapitalize="words"
+                spellcheck="false"
+                maxlength="60"
+                required
+                aria-describedby="name-error"
+              />
+              <p class="field__error" id="name-error" role="alert"></p>
+            </div>
+
+            <fieldset class="field field--date" aria-describedby="date-error">
+              <legend class="field__label">Fecha de nacimiento</legend>
+              <div class="date">
+                <label class="date__part">
+                  <span class="visually-hidden">Día</span>
+                  <input class="field__input" id="day" name="day" inputmode="numeric" pattern="[0-9]*" maxlength="2" placeholder="dd" autocomplete="bday-day" required />
+                </label>
+                <span class="date__sep" aria-hidden="true">/</span>
+                <label class="date__part">
+                  <span class="visually-hidden">Mes</span>
+                  <input class="field__input" id="month" name="month" inputmode="numeric" pattern="[0-9]*" maxlength="2" placeholder="mm" autocomplete="bday-month" required />
+                </label>
+                <span class="date__sep" aria-hidden="true">/</span>
+                <label class="date__part date__part--year">
+                  <span class="visually-hidden">Año</span>
+                  <input class="field__input" id="year" name="year" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="aaaa" autocomplete="bday-year" required />
+                </label>
+              </div>
+              <p class="field__error" id="date-error" role="alert"></p>
+            </fieldset>
+
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">No completar</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button class="button" type="submit" id="submit">
+              <span class="button__label">Sumar mi deseo</span>
+            </button>
+
+          </form>
+
+          <div class="ribbon__done" id="done" tabindex="-1" hidden>
+            <svg class="pin ribbon__pin" viewBox="0 0 160 40" aria-hidden="true" focusable="false">
+              <use href="#safety-pin" />
+            </svg>
+            <p class="ribbon__done-title" id="done-title">Tu deseo ya está en la cinta.</p>
+            <button class="link-button" type="button" id="again">Sumar otro nombre</button>
+          </div>
+
+          <div class="ribbon__closed" id="closed" hidden>
+            <p class="ribbon__done-title">La lista ya está cerrada.</p>
+            <p class="ribbon__done-text">Gracias a todas las que sumaron su deseo.</p>
+          </div>
+          </div>
+        </div>
+
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+        <div class="chain">
+          <ol class="chain__ribbon" id="chain" aria-hidden="true"></ol>
+          <p class="chain__more" id="chain-more" hidden></p>
+          <p class="counter" id="counter" hidden>
+            Ya somos <strong class="counter__value" id="count">0</strong> <span id="count-noun">deseos</span> en la cinta
+          </p>
+          <p class="chain__line">Cada nombre será un deseo, una ilusión y una historia esperando su momento.</p>
+        </div>
+      </section>
+
+      <section class="closing" aria-label="Navidad">
+        <figure class="photo">
+          <svg class="pin photo__pin" viewBox="0 0 160 40" aria-hidden="true" focusable="false">
+            <use href="#safety-pin" />
+          </svg>
+          <img
+            class="photo__img"
+            src="/img/mi-deseo-600.webp"
+            srcset="/img/mi-deseo-600.webp 600w, /img/mi-deseo-900.webp 900w"
+            sizes="(min-width: 56rem) 26rem, 80vw"
+            width="900"
+            height="963"
+            loading="lazy"
+            decoding="async"
+            alt="Un bebé con gorro navideño sonríe y toca una estrella de madera que dice «Mi deseo», colgada de un árbol de Navidad."
+          />
+        </figure>
+        <p class="closing__line stamped">
+          Porque a veces, el deseo más grande de Navidad no viene envuelto en papel de regalo… <em>viene en forma de un bebé. 🤍</em>
+        </p>
+        <a class="button button--gold" href="#name">Sumar mi deseo</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__signature" id="signature" hidden></p>
+    </footer>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="safety-pin" viewBox="0 0 160 40">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="16" cy="20" r="9" stroke-width="3" />
+          <circle cx="16" cy="20" r="4" stroke-width="2" />
+          <path d="M22 13.5 L126 11" stroke-width="3" />
+          <path d="M22 26.5 L118 27" stroke-width="3" />
+          <path d="M118 27 L134 26.2" stroke-width="2" />
+          <path d="M120 6 h22 a8 8 0 0 1 8 8 v12 a8 8 0 0 1 -8 8 h-22 a4 4 0 0 1 -4 -4 v-20 a4 4 0 0 1 4 -4 z" stroke-width="3" />
+          <path d="M124 14 h16" stroke-width="1.5" opacity="0.6" />
+        </g>
+      </symbol>
+    </svg>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "bebes-2027",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "vendor": "node scripts/vendor.mjs",
+    "db:migrate:local": "wrangler d1 migrations apply bebes-2027 --local",
+    "db:migrate:remote": "wrangler d1 migrations apply bebes-2027 --remote",
+    "dev": "npm run vendor && npm run db:migrate:local && wrangler dev",
+    "deploy": "npm run vendor && wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.*",
+    "build:pages": "npm run vendor && node scripts/build-pages.mjs",
+    "deploy:pages": "npm run build:pages && cd pages && wrangler pages deploy --project-name bebes-2027 --branch main"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261119.1",
+    "@pdf-lib/fontkit": "1.1.1",
+    "pdf-lib": "1.17.1",
+    "typescript": "^5.9.3",
+    "wrangler": "4.165.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261118.1": true
+  }
+}

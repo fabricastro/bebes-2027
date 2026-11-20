@@ -1,0 +1,616 @@
+main {
+  display: grid;
+  gap: clamp(3.5rem, 10vw, 6rem);
+  padding-block: clamp(1.75rem, 6vw, 4.5rem) 0;
+}
+
+/* ---------- Masthead ---------- */
+
+.masthead {
+  padding-inline: var(--gutter);
+  max-width: 46rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.masthead__pin {
+  width: clamp(4.5rem, 18vw, 7rem);
+  margin: 0 auto clamp(0.75rem, 3vw, 1.75rem);
+  transform: rotate(-8deg);
+}
+
+.title {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  font-weight: 800;
+  font-variation-settings: "opsz" 72;
+  line-height: 0.84;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.title__word {
+  font-size: clamp(3.75rem, 19vw, 9.5rem);
+}
+
+.title__year {
+  font-size: clamp(2.75rem, 14vw, 7.25rem);
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  margin-top: 0.1em;
+}
+
+.lead {
+  margin: clamp(1.1rem, 4vw, 2.25rem) auto 0;
+  max-width: 32ch;
+  font-size: clamp(1.05rem, 4.2vw, 1.4rem);
+  line-height: 1.45;
+  color: var(--cotton);
+  text-wrap: balance;
+}
+
+/* ---------- The ribbon: a white band crossing the page, carrying the form ---------- */
+
+.stage {
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+  /* The band overhangs the viewport by design; clip it here so the document never
+     grows wider than the screen (iOS would zoom out and then zoom on input focus). */
+  overflow-x: clip;
+}
+
+.ribbon {
+  position: relative;
+  /* Wider than the viewport so the tilted band always runs off both edges. */
+  width: calc(100% + 6rem);
+  margin-inline: -3rem;
+  color: var(--thread);
+  background: var(--cotton);
+  /* Woven selvedge: a gold stitch line runs along both edges of the band. */
+  border-block: 0.6rem solid var(--cotton);
+  outline: 1px dashed var(--gold-deep);
+  outline-offset: -0.35rem;
+  transform: rotate(-1.2deg);
+  transition: transform 700ms var(--ease-out);
+}
+
+.ribbon[data-state="done"],
+.ribbon[data-state="done"] .ribbon__inner {
+  transform: rotate(0deg);
+}
+
+.ribbon__inner {
+  /* Sized to the viewport, not the overhanging band. */
+  width: min(100vw - 2 * var(--gutter), 34rem);
+  margin-inline: auto;
+  /* Counter-rotate so fields and typed text sit level while the band tilts. */
+  transform: rotate(1.2deg);
+  transition: transform 700ms var(--ease-out);
+  padding-block: clamp(1rem, 3vw, 1.5rem) clamp(1.25rem, 4vw, 1.75rem);
+}
+
+/* Live hot-stamp preview */
+.ribbon__stamp {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 0.15rem;
+  min-height: 4.5rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--cotton-shade);
+  text-align: center;
+}
+
+.ribbon__stamp-name {
+  max-width: 100%;
+  font-family: var(--display);
+  font-weight: 700;
+  font-variation-settings: "opsz" 48;
+  font-size: clamp(1.45rem, 6.5vw, 2.4rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.ribbon__stamp-date {
+  font-family: var(--display);
+  font-weight: 500;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: clamp(0.95rem, 4vw, 1.2rem);
+  letter-spacing: 0.18em;
+  color: var(--gold-deep);
+}
+
+.ribbon__stamp [data-empty="true"] {
+  opacity: 0.4;
+}
+
+.ribbon__stamp-name.is-pressing {
+  animation: press 380ms var(--ease-out);
+}
+
+@keyframes press {
+  from {
+    transform: scale(1.04);
+    filter: blur(0.6px);
+  }
+  to {
+    transform: none;
+    filter: none;
+  }
+}
+
+/* Fields */
+.ribbon__form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.field__label {
+  padding: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--thread);
+}
+
+.field__input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  font-size: 1.125rem;
+  color: var(--thread);
+  caret-color: var(--satin);
+  background: #fff;
+  border: 1.5px solid var(--cotton-shade);
+  border-bottom-color: rgb(110 9 25 / 0.45);
+  border-radius: 6px;
+  transition: border-color 200ms, box-shadow 200ms;
+}
+
+.field__input::placeholder {
+  color: #8c7377;
+}
+
+.field__input:hover {
+  border-color: #d8cbc0;
+  border-bottom-color: rgb(110 9 25 / 0.65);
+}
+
+.field__input:focus {
+  outline: none;
+  border-color: var(--satin);
+  box-shadow: 0 0 0 3px rgb(168 15 41 / 0.18);
+}
+
+.field__input[aria-invalid="true"] {
+  border-color: var(--error);
+  background: #fff6f6;
+}
+
+.field__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--thread-soft);
+}
+
+.field__error {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--error);
+}
+
+.field__error:empty {
+  display: none;
+}
+
+.date {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1.6fr);
+  align-items: center;
+  gap: 0.4rem;
+  max-width: 20rem;
+}
+
+.date__part .field__input {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.date__sep {
+  color: var(--thread-soft);
+  font-size: 1.25rem;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-variation-settings: "opsz" 28;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--gold);
+  background: var(--satin);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgb(60 5 15 / 0.3);
+  cursor: pointer;
+  transition: transform 200ms var(--ease-out), background-color 200ms, opacity 200ms;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ribbon .button {
+  width: 100%;
+}
+
+.button:hover {
+  background: var(--satin-deep);
+}
+
+.button:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.button:disabled {
+  cursor: progress;
+  opacity: 0.75;
+}
+
+.button[aria-busy="true"] .button__label::after {
+  content: "…";
+}
+
+/* On red ground the same action reads in gold. */
+.button--gold {
+  color: var(--satin-ink);
+  background: var(--gold);
+}
+
+.button--gold:hover {
+  background: var(--gold-soft);
+}
+
+/* Done + closed states */
+.ribbon__done,
+.ribbon__closed {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.ribbon__done:focus {
+  outline: none;
+}
+
+.ribbon__pin {
+  width: 7.5rem;
+  color: var(--gold-deep);
+  margin-bottom: 0.25rem;
+}
+
+.ribbon[data-state="done"] .ribbon__pin {
+  animation: pin-in 900ms var(--ease-out) both;
+}
+
+@keyframes pin-in {
+  from {
+    transform: translate(40%, -60%) rotate(-28deg);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.ribbon__done-title {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-variation-settings: "opsz" 36;
+  font-size: clamp(1.3rem, 5.5vw, 1.75rem);
+  line-height: 1.15;
+  color: var(--satin);
+  text-wrap: balance;
+}
+
+.ribbon__done-text {
+  margin: 0;
+  color: var(--thread-soft);
+}
+
+.link-button {
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--satin);
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  cursor: pointer;
+}
+
+/* ---------- The chain: one ribbon that grows with every wish ---------- */
+
+.chain {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+/* One continuous band that wraps line after line; each wish adds a length and a gold knot. */
+.chain__ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 0.75rem;
+  width: calc(100% - 2 * var(--gutter));
+  max-width: 60rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chain__piece {
+  position: relative;
+  width: 2.25rem;
+  height: 1.75rem;
+  background: var(--cotton);
+}
+
+.chain__piece::after {
+  content: "";
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: -0.25rem;
+  border-radius: 50%;
+  background: var(--gold-deep);
+}
+
+.chain__piece:first-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0.6rem 50%);
+}
+
+.chain__piece:last-child::after {
+  display: none;
+}
+
+.chain__piece:last-child {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 0.6rem) 50%, 100% 100%, 0 100%);
+}
+
+.chain__piece:only-child {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 0.6rem) 50%, 100% 100%, 0 100%, 0.6rem 50%);
+}
+
+.chain__piece.is-new {
+  transform-origin: left center;
+  animation: tie 700ms var(--ease-out) both;
+}
+
+@keyframes tie {
+  from {
+    transform: scaleX(0);
+    background: var(--gold);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.chain__more {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--gold-soft);
+}
+
+.counter {
+  margin: 0;
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--gold-soft);
+}
+
+.counter__value {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.6em;
+  font-variant-numeric: lining-nums;
+  color: var(--gold);
+  vertical-align: -0.08em;
+}
+
+.chain__line {
+  margin: 0;
+  max-width: 30ch;
+  text-align: center;
+  color: var(--gold-soft);
+  text-wrap: balance;
+}
+
+/* The stamped ribbon flying down into the chain on submit. */
+.flight {
+  position: fixed;
+  z-index: 10;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  background: var(--cotton);
+  pointer-events: none;
+  transform-origin: 0 0;
+}
+
+.form-status {
+  margin: 0;
+  padding-inline: var(--gutter);
+  text-align: center;
+  color: var(--cotton);
+  font-weight: 600;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+/* ---------- Christmas close ---------- */
+
+.closing {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  padding: clamp(3rem, 10vw, 5rem) var(--gutter);
+  background: var(--satin-deep);
+  text-align: center;
+}
+
+.photo {
+  position: relative;
+  width: min(80vw, 26rem);
+  margin: 0 0 0.5rem;
+  padding: 0.6rem 0.6rem 2.25rem;
+  background: var(--cotton);
+  transform: rotate(2.5deg);
+  box-shadow: 0 14px 28px rgb(20 2 6 / 0.45);
+}
+
+.photo__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The safety pin clasps the photo to the page, crossing its top edge. */
+.photo__pin {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  z-index: 1;
+  width: 7rem;
+  color: var(--gold);
+  transform: translateX(-50%) rotate(-10deg);
+}
+
+@media (min-width: 56rem) {
+  .closing {
+    grid-template-columns: auto minmax(0, 28rem);
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+    text-align: left;
+  }
+  .photo {
+    grid-row: span 2;
+  }
+  .closing__line {
+    justify-self: start;
+  }
+  .closing .button {
+    justify-self: start;
+  }
+}
+
+.closing__line {
+  margin: 0;
+  max-width: 22ch;
+  font-weight: 500;
+  font-variation-settings: "opsz" 72;
+  font-size: clamp(1.75rem, 7.5vw, 3rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.closing__line em {
+  display: block;
+  margin-top: 0.4em;
+  font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  flex-grow: 1;
+  padding: 2.5rem var(--gutter) calc(2.5rem + env(safe-area-inset-bottom));
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gold-soft);
+  background: var(--satin-deep);
+}
+
+.footer p {
+  margin: 0.25rem 0;
+}
+
+.footer__signature {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.footer__signature a {
+  display: inline-block;
+  padding: 0.5rem 0.25rem;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.footer__signature a:hover {
+  color: var(--gold-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}

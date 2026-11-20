@@ -1,0 +1,388 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-19T00:00:00Z",
+  "title": "Design System: Bebés 2027",
+  "extensions": {
+    "colorMeta": {
+      "satin": {
+        "role": "primary",
+        "displayName": "Satin Ribbon Red",
+        "canonical": "oklch(46.8% 0.181 21.3)",
+        "tonalRamp": [
+          "#230000",
+          "#530002",
+          "#86000c",
+          "#ac162c",
+          "#d3424b",
+          "#ee7374",
+          "#ffa5a3",
+          "#ffdad7"
+        ]
+      },
+      "satin-deep": {
+        "role": "primary",
+        "displayName": "Deep Satin",
+        "canonical": "oklch(34.6% 0.131 21.0)",
+        "tonalRamp": [
+          "#1d0103",
+          "#48050e",
+          "#76141f",
+          "#9a383c",
+          "#bf595b",
+          "#da8281",
+          "#f7afac",
+          "#ffe0de"
+        ]
+      },
+      "satin-ink": {
+        "role": "neutral",
+        "displayName": "Satin Ink",
+        "canonical": "oklch(19.2% 0.062 13.2)",
+        "tonalRamp": [
+          "#150708",
+          "#371a1d",
+          "#5c3136",
+          "#7d4f53",
+          "#9f6e73",
+          "#bd9295",
+          "#ddbabc",
+          "#ffe8e9"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Stamped Gold",
+        "canonical": "oklch(85.1% 0.102 86.8)",
+        "tonalRamp": [
+          "#130900",
+          "#342000",
+          "#573a00",
+          "#765900",
+          "#98792b",
+          "#b69b5e",
+          "#d7c293",
+          "#fcedcd"
+        ]
+      },
+      "gold-soft": {
+        "role": "secondary",
+        "displayName": "Pale Gold",
+        "canonical": "oklch(90.7% 0.073 90.1)",
+        "tonalRamp": [
+          "#100a00",
+          "#2e2200",
+          "#4f3d04",
+          "#6e5c29",
+          "#8e7c49",
+          "#ad9d72",
+          "#d0c3a2",
+          "#f7eed7"
+        ]
+      },
+      "gold-deep": {
+        "role": "secondary",
+        "displayName": "Old Gold",
+        "canonical": "oklch(53.0% 0.096 78.0)",
+        "tonalRamp": [
+          "#140800",
+          "#361e00",
+          "#5b3700",
+          "#7b560b",
+          "#9c7634",
+          "#ba9864",
+          "#dbc097",
+          "#ffecd0"
+        ]
+      },
+      "cotton": {
+        "role": "neutral",
+        "displayName": "Piqué Cotton",
+        "canonical": "oklch(98.7% 0.005 67.8)",
+        "tonalRamp": [
+          "#0c0b0a",
+          "#252422",
+          "#423f3d",
+          "#605d5b",
+          "#7f7d7a",
+          "#a09e9c",
+          "#c5c4c2",
+          "#efeeed"
+        ]
+      },
+      "cotton-shade": {
+        "role": "neutral",
+        "displayName": "Cotton Shade",
+        "canonical": "oklch(92.3% 0.014 67.7)",
+        "tonalRamp": [
+          "#0d0b09",
+          "#27231f",
+          "#453e38",
+          "#635c55",
+          "#837c75",
+          "#a39d97",
+          "#c8c3be",
+          "#f1eeea"
+        ]
+      },
+      "thread": {
+        "role": "neutral",
+        "displayName": "Thread",
+        "canonical": "oklch(24.8% 0.068 12.4)",
+        "tonalRamp": [
+          "#150608",
+          "#39191d",
+          "#5e2f36",
+          "#7f4d53",
+          "#a16d72",
+          "#bf9095",
+          "#dfb9bc",
+          "#ffe7e9"
+        ]
+      },
+      "thread-soft": {
+        "role": "neutral",
+        "displayName": "Faded Thread",
+        "canonical": "oklch(45.0% 0.048 7.9)",
+        "tonalRamp": [
+          "#130809",
+          "#331d21",
+          "#56353b",
+          "#765258",
+          "#977278",
+          "#b6949a",
+          "#d7bcc0",
+          "#fce9ec"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error Red",
+        "canonical": "oklch(45.7% 0.177 22.4)",
+        "tonalRamp": [
+          "#230000",
+          "#530001",
+          "#850009",
+          "#ab1b2b",
+          "#d2454a",
+          "#ed7473",
+          "#ffa6a2",
+          "#ffdbd7"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Masthead Display",
+        "purpose": "Masthead title only; Literata 800 caps in stamped gold. Year line at 500 italic."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Sentence-case italic section heads and the closing line on red."
+      },
+      "title": {
+        "displayName": "Confirmation Title",
+        "purpose": "Satin-red confirmation messages on cotton and admin sheet titles."
+      },
+      "stamp": {
+        "displayName": "Ribbon Stamp",
+        "purpose": "Live old-gold preview of the participant's name on the cotton band."
+      },
+      "button": {
+        "displayName": "Stamped Button",
+        "purpose": "Literata caps label of the public call-to-action pill."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading copy and field text, Figtree."
+      },
+      "label": {
+        "displayName": "Field Label",
+        "purpose": "Figtree 600 labels in thread on cotton."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-lift",
+        "value": "0 4px 10px rgb(60 5 15 / 0.3)",
+        "purpose": "Pill buttons sitting proud of the band."
+      },
+      {
+        "name": "pinned-photo",
+        "value": "0 14px 28px rgb(20 2 6 / 0.45)",
+        "purpose": "Photo mount in the closing band."
+      },
+      {
+        "name": "sheet",
+        "value": "0 18px 40px rgb(40 4 10 / 0.4)",
+        "purpose": "Admin cotton sheet resting on red."
+      },
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px rgb(168 15 41 / 0.18)",
+        "purpose": "Focused fields, paired with a satin border."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The only easing; every physical movement settles with it."
+      },
+      {
+        "name": "state",
+        "value": "200ms",
+        "purpose": "Button press, hover fills, field border and halo."
+      },
+      {
+        "name": "press",
+        "value": "380ms",
+        "purpose": "Stamp preview settling from scale 1.04 and 0.6px blur on each keystroke."
+      },
+      {
+        "name": "straighten-and-tie",
+        "value": "700ms",
+        "purpose": "Band rotating to level on completion; new chain piece unrolling from scaleX(0)."
+      },
+      {
+        "name": "pin-in",
+        "value": "900ms",
+        "purpose": "Safety pin swinging in on the confirmation state."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "1ms",
+        "purpose": "All animations and transitions collapse under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "admin-compact",
+        "value": "34rem",
+        "purpose": "Admin: hide third table column, stack actions (max-width)."
+      },
+      {
+        "name": "closing-split",
+        "value": "56rem",
+        "purpose": "Closing band becomes photo plus text columns (min-width)."
+      },
+      {
+        "name": "admin-sheet",
+        "value": "62rem",
+        "purpose": "Admin sheet gains 4px corners (min-width)."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The stamped call to action on cotton: satin pill, gold Literata caps.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Sumar mi deseo</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3.5rem; padding: 0.85rem 1.75rem; font-family: var(--display, \"Literata\", Didot, serif); font-size: 1.15rem; font-weight: 700; font-variation-settings: \"opsz\" 28; letter-spacing: 0.08em; text-transform: uppercase; border: 0; border-radius: 999px; box-shadow: 0 4px 10px rgb(60 5 15 / 0.3); cursor: pointer; transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms; } .ds-btn:active { transform: translateY(1px) scale(0.99); } .ds-btn:focus-visible { outline: 2px solid var(--gold, #ebca7e); outline-offset: 3px; } .ds-btn-primary { color: var(--gold, #ebca7e); background: var(--satin, #a80f29); } .ds-btn-primary:hover { background: var(--satin-deep, #6e0919); }"
+    },
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "The same action on red ground: gold pill, satin-ink caps.",
+      "html": "<div class=\"ds-red\"><a class=\"ds-btn ds-btn-gold\" href=\"#\">Sumar mi deseo</a></div>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3.5rem; padding: 0.85rem 1.75rem; font-family: var(--display, \"Literata\", Didot, serif); font-size: 1.15rem; font-weight: 700; font-variation-settings: \"opsz\" 28; letter-spacing: 0.08em; text-transform: uppercase; border: 0; border-radius: 999px; box-shadow: 0 4px 10px rgb(60 5 15 / 0.3); cursor: pointer; transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms; } .ds-btn:active { transform: translateY(1px) scale(0.99); } .ds-btn:focus-visible { outline: 2px solid var(--gold, #ebca7e); outline-offset: 3px; } .ds-red { padding: 2rem; background: var(--satin-deep, #6e0919); } .ds-btn-gold { text-decoration: none; color: var(--satin-ink, #2a050c); background: var(--gold, #ebca7e); } .ds-btn-gold:hover { background: var(--gold-soft, #f3dfa9); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "White field on cotton with a thread-tinted baseline and satin focus halo.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-name\">Tu nombre</label><input class=\"ds-input\" id=\"ds-name\" type=\"text\"><p class=\"ds-field-hint\">Así va a aparecer en la lista.</p></div>",
+      "css": ".ds-field { display: grid; gap: 0.3rem; padding: 1.25rem; background: var(--cotton, #fdfaf7); font-family: var(--text, Figtree, system-ui, sans-serif); } .ds-field-label { font-weight: 600; font-size: 0.95rem; color: var(--thread, #3b1018); } .ds-input { width: 100%; min-height: 3rem; padding: 0.55rem 0.75rem; font: inherit; font-size: 1.125rem; color: var(--thread, #3b1018); caret-color: var(--satin, #a80f29); background: #fff; border: 1.5px solid var(--cotton-shade, #ece4dc); border-bottom-color: rgb(110 9 25 / 0.45); border-radius: 6px; transition: border-color 200ms, box-shadow 200ms; } .ds-input:hover { border-color: #d8cbc0; border-bottom-color: rgb(110 9 25 / 0.65); } .ds-input:focus-visible, .ds-input:focus { outline: none; border-color: var(--satin, #a80f29); box-shadow: 0 0 0 3px rgb(168 15 41 / 0.18); } .ds-field-hint { margin: 0; font-size: 0.85rem; color: var(--thread-soft, #6d4a50); }"
+    },
+    {
+      "name": "Ribbon Band",
+      "kind": "custom",
+      "refersTo": "ribbon-band",
+      "description": "The form surface: tilted full-bleed cotton band with a dashed old-gold selvedge and the live gold stamp. Hover stands in for the done state, when the band straightens.",
+      "html": "<div class=\"ds-ground\"><div class=\"ds-ribbon\"><div class=\"ds-ribbon-inner\"><div class=\"ds-stamp\"><span class=\"ds-stamp-name\">Lucía Pérez</span><span class=\"ds-stamp-date\">14 · 03 · 1992</span></div></div></div></div>",
+      "css": ".ds-ground { padding: 2.5rem 0; overflow: hidden; background: var(--satin, #a80f29); } .ds-ribbon { width: calc(100% + 6rem); margin-inline: -3rem; background: var(--cotton, #fdfaf7); border-block: 0.6rem solid var(--cotton, #fdfaf7); outline: 1px dashed var(--gold-deep, #8a6420); outline-offset: -0.35rem; transform: rotate(-1.2deg); transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-ribbon:hover, .ds-ribbon:hover .ds-ribbon-inner { transform: rotate(0deg); } .ds-ribbon-inner { max-width: 34rem; margin-inline: auto; padding: 1.25rem 1rem; transform: rotate(1.2deg); transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-stamp { display: grid; justify-items: center; gap: 0.15rem; text-align: center; } .ds-stamp-name { font-family: var(--display, \"Literata\", Didot, serif); font-weight: 700; font-variation-settings: \"opsz\" 48; font-size: 2rem; line-height: 1.05; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gold-deep, #8a6420); } .ds-stamp-date { font-family: var(--display, \"Literata\", Didot, serif); font-weight: 500; font-variant-numeric: lining-nums tabular-nums; letter-spacing: 0.18em; color: var(--gold-deep, #8a6420); }"
+    },
+    {
+      "name": "Wish Chain",
+      "kind": "custom",
+      "refersTo": "chain-piece",
+      "description": "Anonymous cotton ribbon pieces joined by old-gold knots, swallowtail-cut at both ends, with the gold count beneath.",
+      "html": "<div class=\"ds-chain-wrap\"><ol class=\"ds-chain\"><li></li><li></li><li></li><li></li><li></li><li></li></ol><p class=\"ds-counter\">Ya somos <strong>6</strong> deseos en la cinta</p></div>",
+      "css": ".ds-chain-wrap { display: grid; justify-items: center; gap: 1rem; padding: 2rem 1rem; background: var(--satin, #a80f29); font-family: var(--text, Figtree, system-ui, sans-serif); } .ds-chain { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 0.75rem; margin: 0; padding: 0; list-style: none; } .ds-chain li { position: relative; width: 2.25rem; height: 1.75rem; background: var(--cotton, #fdfaf7); } .ds-chain li::after { content: \"\"; position: absolute; right: 0.2rem; top: 50%; width: 0.5rem; height: 0.5rem; margin-top: -0.25rem; border-radius: 50%; background: var(--gold-deep, #8a6420); } .ds-chain li:first-child { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0.6rem 50%); } .ds-chain li:last-child { clip-path: polygon(0 0, 100% 0, calc(100% - 0.6rem) 50%, 100% 100%, 0 100%); animation: ds-tie 700ms cubic-bezier(0.16, 1, 0.3, 1) both; transform-origin: left center; } .ds-chain li:last-child::after { display: none; } @keyframes ds-tie { from { transform: scaleX(0); background: var(--gold, #ebca7e); } to { transform: none; } } .ds-counter { margin: 0; color: var(--gold-soft, #f3dfa9); } .ds-counter strong { font-family: var(--display, \"Literata\", Didot, serif); font-weight: 700; font-size: 1.6em; color: var(--gold, #ebca7e); }"
+    },
+    {
+      "name": "Pinned Photo",
+      "kind": "card",
+      "refersTo": "photo-mount",
+      "description": "User-supplied photo on a tilted cotton mount, clasped by the gold safety pin, on the deep satin closing band.",
+      "html": "<div class=\"ds-closing\"><figure class=\"ds-photo\"><svg class=\"ds-pin ds-photo-pin\" viewBox=\"0 0 160 40\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"16\" cy=\"20\" r=\"9\" stroke-width=\"3\"/><circle cx=\"16\" cy=\"20\" r=\"4\" stroke-width=\"2\"/><path d=\"M22 13.5 L126 11\" stroke-width=\"3\"/><path d=\"M22 26.5 L118 27\" stroke-width=\"3\"/><path d=\"M118 27 L134 26.2\" stroke-width=\"2\"/><path d=\"M120 6 h22 a8 8 0 0 1 8 8 v12 a8 8 0 0 1 -8 8 h-22 a4 4 0 0 1 -4 -4 v-20 a4 4 0 0 1 4 -4 z\" stroke-width=\"3\"/><path d=\"M124 14 h16\" stroke-width=\"1.5\" opacity=\"0.6\"/></g></svg><div class=\"ds-photo-img\" role=\"img\" aria-label=\"Photo placeholder\"></div></figure></div>",
+      "css": ".ds-closing { display: grid; justify-items: center; padding: 3rem 1rem; background: var(--satin-deep, #6e0919); } .ds-photo { position: relative; width: min(80%, 16rem); margin: 0; padding: 0.6rem 0.6rem 2.25rem; background: var(--cotton, #fdfaf7); transform: rotate(2.5deg); box-shadow: 0 14px 28px rgb(20 2 6 / 0.45); } .ds-photo-img { aspect-ratio: 900 / 963; background: var(--cotton-shade, #ece4dc); } .ds-pin { display: block; height: auto; overflow: visible; } .ds-photo-pin { position: absolute; top: -1rem; left: 50%; z-index: 1; width: 7rem; color: var(--gold, #ebca7e); transform: translateX(-50%) rotate(-10deg); }"
+    },
+    {
+      "name": "Safety Pin",
+      "kind": "custom",
+      "description": "The single ornament glyph: a line-drawn safety pin in currentColor, stamped gold on red, old gold on cotton.",
+      "html": "<div class=\"ds-pins\"><span class=\"ds-on-red\"><svg class=\"ds-pin\" viewBox=\"0 0 160 40\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"16\" cy=\"20\" r=\"9\" stroke-width=\"3\"/><circle cx=\"16\" cy=\"20\" r=\"4\" stroke-width=\"2\"/><path d=\"M22 13.5 L126 11\" stroke-width=\"3\"/><path d=\"M22 26.5 L118 27\" stroke-width=\"3\"/><path d=\"M118 27 L134 26.2\" stroke-width=\"2\"/><path d=\"M120 6 h22 a8 8 0 0 1 8 8 v12 a8 8 0 0 1 -8 8 h-22 a4 4 0 0 1 -4 -4 v-20 a4 4 0 0 1 4 -4 z\" stroke-width=\"3\"/><path d=\"M124 14 h16\" stroke-width=\"1.5\" opacity=\"0.6\"/></g></svg></span><span class=\"ds-on-cotton\"><svg class=\"ds-pin\" viewBox=\"0 0 160 40\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"16\" cy=\"20\" r=\"9\" stroke-width=\"3\"/><circle cx=\"16\" cy=\"20\" r=\"4\" stroke-width=\"2\"/><path d=\"M22 13.5 L126 11\" stroke-width=\"3\"/><path d=\"M22 26.5 L118 27\" stroke-width=\"3\"/><path d=\"M118 27 L134 26.2\" stroke-width=\"2\"/><path d=\"M120 6 h22 a8 8 0 0 1 8 8 v12 a8 8 0 0 1 -8 8 h-22 a4 4 0 0 1 -4 -4 v-20 a4 4 0 0 1 4 -4 z\" stroke-width=\"3\"/><path d=\"M124 14 h16\" stroke-width=\"1.5\" opacity=\"0.6\"/></g></svg></span></div>",
+      "css": ".ds-pins { display: grid; grid-template-columns: 1fr 1fr; } .ds-pins > span { display: grid; place-items: center; padding: 2rem 1rem; } .ds-on-red { background: var(--satin, #a80f29); color: var(--gold, #ebca7e); } .ds-on-cotton { background: var(--cotton, #fdfaf7); color: var(--gold-deep, #8a6420); } .ds-pin { width: 7rem; height: auto; overflow: visible; transform: rotate(-8deg); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Wish Ribbon",
+    "overview": "Every surface is a length of souvenir ribbon. The ground is flat satin red, type is hot-stamped gold, and the working material (the form, the admin sheet, the photo mount) is white cotton laid across the red. Nothing imitates a material with gradients, gloss, or emboss. Satin is a flat field, gold is a flat ink, and the illusion comes from composition: a band that tilts and runs off both edges of the screen, a dashed stitch along its selvedge, a gold safety pin fastening things down.\n\nThe page is a single centered column, generous on red and dense on cotton. Display type is Literata, set heavy and large, often in caps, the way names are stamped on a christening ribbon. Body copy is Figtree, plain and warm. Motion is physical and brief: the band straightens when it is pinned, a stamped name settles as if pressed, and a new piece of ribbon unrolls into the chain.\n\nThe confirmed rejection is the pastel baby-shower card: no watercolor, no flowers, no illustration, no emoji.",
+    "keyCharacteristics": [
+      "Flat satin red ground with a deeper red closing band and footer.",
+      "Gold leaf as flat color, never foil, sheen, or emboss.",
+      "White cotton band, tilted -1.2deg, full bleed, with a dashed gold selvedge stitch.",
+      "Literata display in caps for stamped moments; Figtree for reading and fields.",
+      "A line-drawn gold safety pin as the single ornament glyph.",
+      "A chain of anonymous cotton ribbon pieces with gold knots, one per wish."
+    ],
+    "rules": [
+      {
+        "name": "The Flat Ink Rule",
+        "body": "Red and gold are flat fills. There are no gradients, metallic sheens, or highlight overlays anywhere in the build. Gold reads as gold through its value against red, not through faked reflection.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Golds Rule",
+        "body": "Gold on red uses Stamped Gold or Pale Gold. Gold on cotton uses Old Gold. Never put light gold on white.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stamping Rule",
+        "body": "Literata in caps is reserved for things that are stamped: the title, a participant's name, and the call to action. Sentences stay in sentence case, even when they are set in Literata.",
+        "section": "typography"
+      },
+      {
+        "name": "The Optical Size Rule",
+        "body": "The principal Literata settings declare an `opsz` that matches their rendered size: 72 for the masthead (Literata opsz max), 72 for the section headline and closing line, 48 for the stamp, 36 for the confirmation title, and 28 for the button. New display settings follow this scale.",
+        "section": "typography"
+      },
+      {
+        "name": "The Laid-On Rule",
+        "body": "Only objects that are physically laid on the ribbon cast a shadow: a button, a pinned photo, a sheet. The band and the chain stay flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep red and gold flat. Express gold on red with Stamped Gold (#ebca7e) and gold on cotton with Old Gold (#8a6420).",
+      "**Do** put working content (forms, lists, photos) on cotton laid over red, and keep red for the ground and the stamped type.",
+      "**Do** set stamped moments (title, names, call to action) in Literata caps with an `opsz` that matches the rendered size, and set reading copy in Figtree.",
+      "**Do** use the safety pin SVG, in `currentColor`, when something needs fastening or confirming.",
+      "**Do** keep tilts small (between -10deg and 2.5deg) and straighten the band when the user completes the form.",
+      "**Do** keep public fields at least 3rem tall and the primary action at 3.5rem.",
+      "**Do** collapse all animation to 1ms under `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "**Don't** imitate foil, emboss, or satin sheen with gradients, highlights, or texture images.",
+      "**Don't** add flowers, watercolor, illustrations, or emoji. The pastel baby-shower card is the confirmed anti-reference.",
+      "**Don't** introduce a second decorative glyph alongside the safety pin.",
+      "**Don't** put light gold (#ebca7e or #f3dfa9) on cotton, where it loses legibility.",
+      "**Don't** put names, initials, or other text on chain pieces. Each piece is a plain cotton length with a knot.",
+      "**Don't** use hard offset shadows or neutral gray shadows. Shadows are soft, tinted dark red, and reserved for laid-on objects."
+    ]
+  }
+}

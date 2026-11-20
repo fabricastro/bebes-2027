@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bebes-2027",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bebes-2027",
+      // Replace with the real id from `wrangler d1 create bebes-2027` before deploying.
+      "database_id": "8c29804d-fe99-4720-855b-cd05d2cdc388",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    // Doctor's display name / Instagram handle shown on the public page. Empty hides it.
+    "SIGNATURE": "@dra.olivarescecilia"
+  }
+  // Secrets (set with `wrangler secret put`, locally in .dev.vars):
+  //   ADMIN_PASSWORD  password for /admin
+  //   SESSION_SECRET  random string used to sign admin sessions and hash IPs
+}

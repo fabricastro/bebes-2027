@@ -1,0 +1,18 @@
+{
+  // Cloudflare Pages deployment (serves at bebes-2027.pages.dev).
+  // Build with `npm run build:pages`; the Worker code runs as Pages advanced-mode `_worker.js`.
+  "name": "bebes-2027",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-11-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bebes-2027",
+      "database_id": "8c29804d-fe99-4720-855b-cd05d2cdc388",
+      "migrations_dir": "../migrations"
+    }
+  ],
+  "vars": {
+    "SIGNATURE": "@dra.olivarescecilia"
+  }
+}
